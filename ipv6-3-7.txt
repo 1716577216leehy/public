@@ -43,4 +43,12 @@
 [2606:4700:9a96:b4b3:e280:cf52:c1b0:7dc0]# 峰值速度 84480 kB/s
 [2606:4700:90c9:c172:a972:033d:4d63:1605]# 峰值速度 84684 kB/s
 [2606:4700:8392:f293:5d99:da66:7683:b874]# 峰值速度 84275 kB/s
-
+usa.visa.com
+myanmar.visa.com
+www.visa.com.tw
+www.visaeurope.ch
+www.visa.com.br
+www.visasoutheasteurope.com
+www.zendesk.com
+2606:4700:4400::ac40:99cd
+2606:4700:4400::6812:2233
