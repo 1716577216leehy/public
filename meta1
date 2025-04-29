@@ -1,0 +1,2909 @@
+{
+    "mixed-port": 7890,
+    "ipv6": true,
+    "allow-lan": true,
+    "mode": "rule",
+    "log-level": "warning",
+    "disable-keep-alive": false,
+    "keep-alive-idle": 10,
+    "keep-alive-interval": 15,
+    "unified-delay": false,
+    "geo-auto-update": true,
+    "geo-update-interval": 168,
+    "external-controller": "127.0.0.1:9090",
+    "external-ui-url": "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
+    "external-ui": "ui",
+    "external-controller-cors": {
+        "allow-origins": [
+            "*"
+        ],
+        "allow-private-network": true
+    },
+    "profile": {
+        "store-selected": true,
+        "store-fake-ip": true
+    },
+    "dns": {
+        "enable": true,
+        "listen": "0.0.0.0:1053",
+        "ipv6": true,
+        "respect-rules": true,
+        "use-system-hosts": false,
+        "nameserver": [
+            "https://8.8.8.8/dns-query#✅ Selector"
+        ],
+        "proxy-server-nameserver": [
+            "8.8.8.8#DIRECT"
+        ],
+        "nameserver-policy": {
+            "raw.githubusercontent.com": "8.8.8.8#DIRECT",
+            "time.apple.com": "8.8.8.8#DIRECT",
+            "rule-set:cn": [
+                "8.8.8.8#DIRECT"
+            ]
+        }
+    },
+    "tun": {
+        "enable": true,
+        "stack": "mixed",
+        "auto-route": true,
+        "strict-route": true,
+        "auto-detect-interface": true,
+        "dns-hijack": [
+            "any:53",
+            "tcp://any:53"
+        ],
+        "mtu": 9000
+    },
+    "sniffer": {
+        "enable": true,
+        "force-dns-mapping": true,
+        "parse-pure-ip": true,
+        "override-destination": false,
+        "sniff": {
+            "HTTP": {
+                "ports": [
+                    80,
+                    8080,
+                    8880,
+                    2052,
+                    2082,
+                    2086,
+                    2095
+                ]
+            },
+            "TLS": {
+                "ports": [
+                    443,
+                    8443,
+                    2053,
+                    2083,
+                    2087,
+                    2096
+                ]
+            }
+        }
+    },
+    "proxies": [
+        {
+            "name": "💦 1 - VLESS - Domain - 443",
+            "type": "vless",
+            "server": "lee-2bw.pages.dev",
+            "port": 443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/hrUPlhAAzXKqf7Ah/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "Lee-2BW.paGes.DeV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 2 - VLESS - Domain - 443",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/mu5CjJqgy06HnWB0/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lee-2BW.pages.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 3 - VLESS - IPv4 - 443",
+            "type": "vless",
+            "server": "172.66.47.198",
+            "port": 443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/emkNU474CUumpxB9/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEe-2BW.PagES.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 4 - VLESS - IPv4 - 443",
+            "type": "vless",
+            "server": "172.66.44.58",
+            "port": 443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/Qxvtp56F6Kk9FH2k/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "Lee-2BW.pageS.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 5 - VLESS - IPv6 - 443",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/YzhcZRWA0p9tjWxn/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "Lee-2BW.pAges.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 6 - VLESS - IPv6 - 443",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/DeU2Ddl4a0aLoE77/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEE-2bw.paGes.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 7 - VLESS - Clean IP - 443",
+            "type": "vless",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/F99ttPHsAJbVPDIJ/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEE-2BW.pagES.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 8 - VLESS - Clean IP - 443",
+            "type": "vless",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/NViZJ26Q3O4hYTS3/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEE-2bW.pAgES.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 9 - VLESS - Domain - 8443",
+            "type": "vless",
+            "server": "lee-2bw.pages.dev",
+            "port": 8443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/hdWZlrXRXO270ImP/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LeE-2Bw.PAGEs.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 10 - VLESS - Domain - 8443",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 8443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/0vqVjv6PClXHja7Y/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LeE-2BW.PAges.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 11 - VLESS - IPv4 - 8443",
+            "type": "vless",
+            "server": "172.66.47.198",
+            "port": 8443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/rDPUShJtKel5eQGA/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEe-2bW.PAgES.DeV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 12 - VLESS - IPv4 - 8443",
+            "type": "vless",
+            "server": "172.66.44.58",
+            "port": 8443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/cea6dyFJbAEIR1e7/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "leE-2bW.PAgeS.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 13 - VLESS - IPv6 - 8443",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 8443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/auqi79SaQiPM6Z0K/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEe-2Bw.pAGEs.DeV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 14 - VLESS - IPv6 - 8443",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 8443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/6zKkDTmcU2ckgnFF/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEE-2Bw.PAGES.DEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 15 - VLESS - Clean IP - 8443",
+            "type": "vless",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 8443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/0OAN7J06doMviFbL/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEe-2bw.PAgeS.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 16 - VLESS - Clean IP - 8443",
+            "type": "vless",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 8443,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/PdJ73u2MZAVcsziE/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEE-2bW.pAgEs.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 17 - VLESS - Domain - 2053",
+            "type": "vless",
+            "server": "lee-2bw.pages.dev",
+            "port": 2053,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/v7qbQk4iuDglvOsu/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "Lee-2BW.paGES.DEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 18 - VLESS - Domain - 2053",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 2053,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/Yrhi3Ex02Ue4l67C/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "leE-2bw.PagEs.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 19 - VLESS - IPv4 - 2053",
+            "type": "vless",
+            "server": "172.66.47.198",
+            "port": 2053,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/w7vsLWQ99PXix29d/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEe-2Bw.pagEs.DEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 20 - VLESS - IPv4 - 2053",
+            "type": "vless",
+            "server": "172.66.44.58",
+            "port": 2053,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/vb5kuOCwbfx0G8A8/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "Lee-2Bw.pAgEs.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 21 - VLESS - IPv6 - 2053",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 2053,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/3Ns7cxYq7pzaExAE/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEE-2BW.pAGes.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 22 - VLESS - IPv6 - 2053",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 2053,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/w0JkqCoqUMdQTzTl/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEE-2bw.PaGES.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 23 - VLESS - Clean IP - 2053",
+            "type": "vless",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 2053,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/j697arFqUOrYEPbd/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEE-2BW.PageS.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 24 - VLESS - Clean IP - 2053",
+            "type": "vless",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 2053,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/xtga8lCJ0zW3Cuhn/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEE-2bW.PaGES.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 25 - VLESS - Domain - 2083",
+            "type": "vless",
+            "server": "lee-2bw.pages.dev",
+            "port": 2083,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/tUPzwhHenc0ANrdU/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LeE-2bW.pAGes.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 26 - VLESS - Domain - 2083",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 2083,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/NNuHrHoMGu1SpvAG/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "Lee-2BW.PAGes.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 27 - VLESS - IPv4 - 2083",
+            "type": "vless",
+            "server": "172.66.47.198",
+            "port": 2083,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/UKfe4jrFhC7MU78G/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lee-2bW.pAGeS.DeV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 28 - VLESS - IPv4 - 2083",
+            "type": "vless",
+            "server": "172.66.44.58",
+            "port": 2083,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/igdzDYXPsK5QneXi/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "Lee-2BW.paGEs.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 29 - VLESS - IPv6 - 2083",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 2083,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/CkZfoNf1caGBwZGB/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "leE-2Bw.pAGEs.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 30 - VLESS - IPv6 - 2083",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 2083,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/cGjCto0RbMp2xoMW/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEe-2bW.paGes.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 31 - VLESS - Clean IP - 2083",
+            "type": "vless",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 2083,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/3j6vSi59VTJ5Jmcy/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LeE-2Bw.paGES.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 32 - VLESS - Clean IP - 2083",
+            "type": "vless",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 2083,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/yucxv4pCuvta3Jta/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEe-2bW.paGEs.DEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 33 - VLESS - Domain - 2087",
+            "type": "vless",
+            "server": "lee-2bw.pages.dev",
+            "port": 2087,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/UhkqLXya1Mt8n3dN/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEE-2bw.paGES.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 34 - VLESS - Domain - 2087",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 2087,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/3OkvGogAcZJKXxVI/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "Lee-2bW.pageS.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 35 - VLESS - IPv4 - 2087",
+            "type": "vless",
+            "server": "172.66.47.198",
+            "port": 2087,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/wx5zPPgiHr6F5jbg/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEe-2Bw.PAGEs.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 36 - VLESS - IPv4 - 2087",
+            "type": "vless",
+            "server": "172.66.44.58",
+            "port": 2087,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/WGRPdsKs8oq8i8YO/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LeE-2bw.PageS.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 37 - VLESS - IPv6 - 2087",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 2087,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/nlvF7DD0KeoAqxRX/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEE-2Bw.pAgEs.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 38 - VLESS - IPv6 - 2087",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 2087,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/coGfulxjpOebCH4s/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LeE-2bW.PAGeS.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 39 - VLESS - Clean IP - 2087",
+            "type": "vless",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 2087,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/egBUX5VlAXoXRM35/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "leE-2Bw.paGES.DEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 40 - VLESS - Clean IP - 2087",
+            "type": "vless",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 2087,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/7B19mAlkzvBrb81M/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LeE-2BW.PAGES.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 41 - VLESS - Domain - 2096",
+            "type": "vless",
+            "server": "lee-2bw.pages.dev",
+            "port": 2096,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/jBEmRev3BXW7RCPr/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LeE-2BW.pAGes.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 42 - VLESS - Domain - 2096",
+            "type": "vless",
+            "server": "www.speedtest.net",
+            "port": 2096,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/YV64YiukDPavPSXw/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEe-2BW.PageS.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 43 - VLESS - IPv4 - 2096",
+            "type": "vless",
+            "server": "172.66.47.198",
+            "port": 2096,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/bWyeZhCtfmB7cxq4/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lee-2BW.pageS.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 44 - VLESS - IPv4 - 2096",
+            "type": "vless",
+            "server": "172.66.44.58",
+            "port": 2096,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/03DmCjx4ZD8ZsfL5/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "Lee-2bw.PAgES.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 45 - VLESS - IPv6 - 2096",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 2096,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/RRTtVDQEDCssoILf/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "leE-2BW.PAgES.DEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 46 - VLESS - IPv6 - 2096",
+            "type": "vless",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 2096,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/4IkfiVu04vePEFB0/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEE-2bW.PAGes.DeV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 47 - VLESS - Clean IP - 2096",
+            "type": "vless",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 2096,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/A197bzs23yIZxcno/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "lEe-2BW.pagEs.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 48 - VLESS - Clean IP - 2096",
+            "type": "vless",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 2096,
+            "uuid": "dfedcb76-9bee-46e4-8675-20fcbbb3fec1",
+            "packet-encoding": "packetaddr",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/G02bpsH2WXbZkUI9/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "servername": "LEe-2bw.pAges.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 1 - Trojan - Domain - 443",
+            "type": "trojan",
+            "server": "lee-2bw.pages.dev",
+            "port": 443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trw4UBcowZ9XJ6IwmZ/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEE-2BW.pAGeS.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 2 - Trojan - Domain - 443",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trJEePkCr8DTtM99ku/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEe-2bw.PagEs.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 3 - Trojan - IPv4 - 443",
+            "type": "trojan",
+            "server": "172.66.47.198",
+            "port": 443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trQkHvjdn3503gdoyG/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEE-2bw.paGEs.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 4 - Trojan - IPv4 - 443",
+            "type": "trojan",
+            "server": "172.66.44.58",
+            "port": 443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trgh2HS579ARekKWab/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LeE-2bW.pageS.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 5 - Trojan - IPv6 - 443",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trpIInLxHxuiaPcPgI/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "Lee-2BW.pAGeS.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 6 - Trojan - IPv6 - 443",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trpNqAjpiDj0xw3iV1/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2bw.paGEs.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 7 - Trojan - Clean IP - 443",
+            "type": "trojan",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trWSaRTyeHynG9ThYy/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "leE-2bw.paGES.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 8 - Trojan - Clean IP - 443",
+            "type": "trojan",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trw2n0KtqP2jAGLXiW/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "Lee-2Bw.paGEs.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 9 - Trojan - Domain - 8443",
+            "type": "trojan",
+            "server": "lee-2bw.pages.dev",
+            "port": 8443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trsKsr7ge6B9x7gK8l/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "leE-2bW.paGeS.DEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 10 - Trojan - Domain - 8443",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 8443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trr0VUfSiYcfpkd3ez/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2Bw.PaGES.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 11 - Trojan - IPv4 - 8443",
+            "type": "trojan",
+            "server": "172.66.47.198",
+            "port": 8443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/truAC7FCTBxLdpT82c/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2bw.pageS.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 12 - Trojan - IPv4 - 8443",
+            "type": "trojan",
+            "server": "172.66.44.58",
+            "port": 8443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/triugqzpfTZTvbnDDp/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEE-2bW.pageS.DEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 13 - Trojan - IPv6 - 8443",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 8443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trEqhHupWKsX1zqZfZ/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2bW.PAGEs.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 14 - Trojan - IPv6 - 8443",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 8443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trmPEjr1x9pw7cm0BL/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "Lee-2bW.pagEs.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 15 - Trojan - Clean IP - 8443",
+            "type": "trojan",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 8443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trWEihE8k7JTamDUjf/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "leE-2bW.PaGeS.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 16 - Trojan - Clean IP - 8443",
+            "type": "trojan",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 8443,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/tr9xjkWI3hZ8i4VZqf/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEE-2BW.pAges.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 17 - Trojan - Domain - 2053",
+            "type": "trojan",
+            "server": "lee-2bw.pages.dev",
+            "port": 2053,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trDa9DhueDR3qVY630/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2Bw.PAGes.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 18 - Trojan - Domain - 2053",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 2053,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trrpOJrBoTrsEzimpM/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEe-2Bw.PaGES.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 19 - Trojan - IPv4 - 2053",
+            "type": "trojan",
+            "server": "172.66.47.198",
+            "port": 2053,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trufETfjsjzl8qJ3DL/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEE-2Bw.pAgeS.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 20 - Trojan - IPv4 - 2053",
+            "type": "trojan",
+            "server": "172.66.44.58",
+            "port": 2053,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trKYOfosYl0FMiwmJf/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2bW.PagES.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 21 - Trojan - IPv6 - 2053",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 2053,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trqbUuY29l5J3z5kYg/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2bw.pAGeS.DeV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 22 - Trojan - IPv6 - 2053",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 2053,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/troLhr5TchkR5oTZ63/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "Lee-2bW.pagES.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 23 - Trojan - Clean IP - 2053",
+            "type": "trojan",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 2053,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trZflqkyASKVWNqBpo/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEE-2BW.PAgES.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 24 - Trojan - Clean IP - 2053",
+            "type": "trojan",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 2053,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trJpMU3pLgFPEmBVzy/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEE-2bW.PageS.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 25 - Trojan - Domain - 2083",
+            "type": "trojan",
+            "server": "lee-2bw.pages.dev",
+            "port": 2083,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trxx5XI4kPFvQNG4KC/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEE-2bW.PAGes.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 26 - Trojan - Domain - 2083",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 2083,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/tr8eJSyE81AzZMk4LB/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LeE-2bw.pagES.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 27 - Trojan - IPv4 - 2083",
+            "type": "trojan",
+            "server": "172.66.47.198",
+            "port": 2083,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trRa0TySJCm6Wp7OKa/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "leE-2Bw.PAges.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 28 - Trojan - IPv4 - 2083",
+            "type": "trojan",
+            "server": "172.66.44.58",
+            "port": 2083,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trQQBZ9lzMRzBNyHJX/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lee-2Bw.PaGES.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 29 - Trojan - IPv6 - 2083",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 2083,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trlUb8682BPRIWx1CT/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEE-2bW.PaGES.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 30 - Trojan - IPv6 - 2083",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 2083,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trWi3ggCVevwJ0tMns/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEE-2bW.paGEs.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 31 - Trojan - Clean IP - 2083",
+            "type": "trojan",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 2083,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trEG6qDwMzkdNLPPhW/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEE-2BW.PAGES.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 32 - Trojan - Clean IP - 2083",
+            "type": "trojan",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 2083,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trHdD7Tzh87k6AzXbe/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2bW.pAgEs.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 33 - Trojan - Domain - 2087",
+            "type": "trojan",
+            "server": "lee-2bw.pages.dev",
+            "port": 2087,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trEcnKjRsV3zl6sJ7B/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "leE-2bW.paGEs.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 34 - Trojan - Domain - 2087",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 2087,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trLyaqvL0d9bC9iqkF/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2Bw.PAGES.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 35 - Trojan - IPv4 - 2087",
+            "type": "trojan",
+            "server": "172.66.47.198",
+            "port": 2087,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trYUkGgzB5rwwMtYzj/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "Lee-2bW.PaGeS.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 36 - Trojan - IPv4 - 2087",
+            "type": "trojan",
+            "server": "172.66.44.58",
+            "port": 2087,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/tr5DDVoNcjK4lnFYpl/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "Lee-2bw.paGeS.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 37 - Trojan - IPv6 - 2087",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 2087,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trV7BxwaXmgxkBqPud/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2BW.pAGeS.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 38 - Trojan - IPv6 - 2087",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 2087,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trjZ4IXIPtepAC6IKK/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lee-2BW.pAgeS.DeV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 39 - Trojan - Clean IP - 2087",
+            "type": "trojan",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 2087,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trYZ8kto5kWoH9Q5qB/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2Bw.paGeS.DEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 40 - Trojan - Clean IP - 2087",
+            "type": "trojan",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 2087,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trrwd4A1Pe5tSXcBpu/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEe-2bw.pAGEs.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 41 - Trojan - Domain - 2096",
+            "type": "trojan",
+            "server": "lee-2bw.pages.dev",
+            "port": 2096,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trvwOyPCKvdmo70X9W/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "leE-2BW.PaGEs.dEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 42 - Trojan - Domain - 2096",
+            "type": "trojan",
+            "server": "www.speedtest.net",
+            "port": 2096,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trHR6vLREaTDoQe0mm/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "leE-2Bw.PageS.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 43 - Trojan - IPv4 - 2096",
+            "type": "trojan",
+            "server": "172.66.47.198",
+            "port": 2096,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/traXnnvGvtGoXg0wJ8/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEE-2Bw.PAges.dEv",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 44 - Trojan - IPv4 - 2096",
+            "type": "trojan",
+            "server": "172.66.44.58",
+            "port": 2096,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trn8GL70Oevkh6qwxc/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "Lee-2bw.pAgES.Dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 45 - Trojan - IPv6 - 2096",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2fc6",
+            "port": 2096,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trwO22x8s8C8zuLmDz/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "Lee-2Bw.PAges.DEV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 46 - Trojan - IPv6 - 2096",
+            "type": "trojan",
+            "server": "2606:4700:310c::ac42:2c3a",
+            "port": 2096,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trQXR5EaiDZR2n0q7E/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "LEe-2Bw.pAgEs.DeV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 47 - Trojan - Clean IP - 2096",
+            "type": "trojan",
+            "server": "2606:4700:964b:9073:8bdc:ec6d:7ad4:b381",
+            "port": 2096,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trcHM3fGir8xE1if9H/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lee-2bW.PAGeS.deV",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        },
+        {
+            "name": "💦 48 - Trojan - Clean IP - 2096",
+            "type": "trojan",
+            "server": "2606:4700:90c4:5c6b:5c8d:1f44:b369:8422",
+            "port": 2096,
+            "password": "171657lhyY.171657",
+            "ip-version": "dual",
+            "tls": true,
+            "network": "ws",
+            "tfo": true,
+            "mptcp": true,
+            "ws-opts": {
+                "path": "/trFEych4OPXlBXySUs/MTU4LjEwMS42NS4xNTUsY2RuLnhuLS1iNmdhYy5ldS5vcmc=",
+                "headers": {
+                    "Host": "lee-2bw.pages.dev"
+                },
+                "max-early-data": 2560,
+                "early-data-header-name": "Sec-WebSocket-Protocol"
+            },
+            "sni": "lEe-2BW.pAGES.dev",
+            "alpn": [
+                "http/1.1.1.1"
+            ],
+            "client-fingerprint": "random",
+            "skip-cert-verify": false
+        }
+    ],
+    "proxy-groups": [
+        {
+            "name": "✅ Selector",
+            "type": "select",
+            "proxies": [
+                "💦 Best Ping 💥",
+                "💦 1 - VLESS - Domain - 443",
+                "💦 2 - VLESS - Domain - 443",
+                "💦 3 - VLESS - IPv4 - 443",
+                "💦 4 - VLESS - IPv4 - 443",
+                "💦 5 - VLESS - IPv6 - 443",
+                "💦 6 - VLESS - IPv6 - 443",
+                "💦 7 - VLESS - Clean IP - 443",
+                "💦 8 - VLESS - Clean IP - 443",
+                "💦 9 - VLESS - Domain - 8443",
+                "💦 10 - VLESS - Domain - 8443",
+                "💦 11 - VLESS - IPv4 - 8443",
+                "💦 12 - VLESS - IPv4 - 8443",
+                "💦 13 - VLESS - IPv6 - 8443",
+                "💦 14 - VLESS - IPv6 - 8443",
+                "💦 15 - VLESS - Clean IP - 8443",
+                "💦 16 - VLESS - Clean IP - 8443",
+                "💦 17 - VLESS - Domain - 2053",
+                "💦 18 - VLESS - Domain - 2053",
+                "💦 19 - VLESS - IPv4 - 2053",
+                "💦 20 - VLESS - IPv4 - 2053",
+                "💦 21 - VLESS - IPv6 - 2053",
+                "💦 22 - VLESS - IPv6 - 2053",
+                "💦 23 - VLESS - Clean IP - 2053",
+                "💦 24 - VLESS - Clean IP - 2053",
+                "💦 25 - VLESS - Domain - 2083",
+                "💦 26 - VLESS - Domain - 2083",
+                "💦 27 - VLESS - IPv4 - 2083",
+                "💦 28 - VLESS - IPv4 - 2083",
+                "💦 29 - VLESS - IPv6 - 2083",
+                "💦 30 - VLESS - IPv6 - 2083",
+                "💦 31 - VLESS - Clean IP - 2083",
+                "💦 32 - VLESS - Clean IP - 2083",
+                "💦 33 - VLESS - Domain - 2087",
+                "💦 34 - VLESS - Domain - 2087",
+                "💦 35 - VLESS - IPv4 - 2087",
+                "💦 36 - VLESS - IPv4 - 2087",
+                "💦 37 - VLESS - IPv6 - 2087",
+                "💦 38 - VLESS - IPv6 - 2087",
+                "💦 39 - VLESS - Clean IP - 2087",
+                "💦 40 - VLESS - Clean IP - 2087",
+                "💦 41 - VLESS - Domain - 2096",
+                "💦 42 - VLESS - Domain - 2096",
+                "💦 43 - VLESS - IPv4 - 2096",
+                "💦 44 - VLESS - IPv4 - 2096",
+                "💦 45 - VLESS - IPv6 - 2096",
+                "💦 46 - VLESS - IPv6 - 2096",
+                "💦 47 - VLESS - Clean IP - 2096",
+                "💦 48 - VLESS - Clean IP - 2096",
+                "💦 1 - Trojan - Domain - 443",
+                "💦 2 - Trojan - Domain - 443",
+                "💦 3 - Trojan - IPv4 - 443",
+                "💦 4 - Trojan - IPv4 - 443",
+                "💦 5 - Trojan - IPv6 - 443",
+                "💦 6 - Trojan - IPv6 - 443",
+                "💦 7 - Trojan - Clean IP - 443",
+                "💦 8 - Trojan - Clean IP - 443",
+                "💦 9 - Trojan - Domain - 8443",
+                "💦 10 - Trojan - Domain - 8443",
+                "💦 11 - Trojan - IPv4 - 8443",
+                "💦 12 - Trojan - IPv4 - 8443",
+                "💦 13 - Trojan - IPv6 - 8443",
+                "💦 14 - Trojan - IPv6 - 8443",
+                "💦 15 - Trojan - Clean IP - 8443",
+                "💦 16 - Trojan - Clean IP - 8443",
+                "💦 17 - Trojan - Domain - 2053",
+                "💦 18 - Trojan - Domain - 2053",
+                "💦 19 - Trojan - IPv4 - 2053",
+                "💦 20 - Trojan - IPv4 - 2053",
+                "💦 21 - Trojan - IPv6 - 2053",
+                "💦 22 - Trojan - IPv6 - 2053",
+                "💦 23 - Trojan - Clean IP - 2053",
+                "💦 24 - Trojan - Clean IP - 2053",
+                "💦 25 - Trojan - Domain - 2083",
+                "💦 26 - Trojan - Domain - 2083",
+                "💦 27 - Trojan - IPv4 - 2083",
+                "💦 28 - Trojan - IPv4 - 2083",
+                "💦 29 - Trojan - IPv6 - 2083",
+                "💦 30 - Trojan - IPv6 - 2083",
+                "💦 31 - Trojan - Clean IP - 2083",
+                "💦 32 - Trojan - Clean IP - 2083",
+                "💦 33 - Trojan - Domain - 2087",
+                "💦 34 - Trojan - Domain - 2087",
+                "💦 35 - Trojan - IPv4 - 2087",
+                "💦 36 - Trojan - IPv4 - 2087",
+                "💦 37 - Trojan - IPv6 - 2087",
+                "💦 38 - Trojan - IPv6 - 2087",
+                "💦 39 - Trojan - Clean IP - 2087",
+                "💦 40 - Trojan - Clean IP - 2087",
+                "💦 41 - Trojan - Domain - 2096",
+                "💦 42 - Trojan - Domain - 2096",
+                "💦 43 - Trojan - IPv4 - 2096",
+                "💦 44 - Trojan - IPv4 - 2096",
+                "💦 45 - Trojan - IPv6 - 2096",
+                "💦 46 - Trojan - IPv6 - 2096",
+                "💦 47 - Trojan - Clean IP - 2096",
+                "💦 48 - Trojan - Clean IP - 2096"
+            ]
+        },
+        {
+            "name": "💦 Best Ping 💥",
+            "type": "url-test",
+            "url": "https://www.gstatic.com/generate_204",
+            "interval": 30,
+            "tolerance": 50,
+            "proxies": [
+                "💦 1 - VLESS - Domain - 443",
+                "💦 2 - VLESS - Domain - 443",
+                "💦 3 - VLESS - IPv4 - 443",
+                "💦 4 - VLESS - IPv4 - 443",
+                "💦 5 - VLESS - IPv6 - 443",
+                "💦 6 - VLESS - IPv6 - 443",
+                "💦 7 - VLESS - Clean IP - 443",
+                "💦 8 - VLESS - Clean IP - 443",
+                "💦 9 - VLESS - Domain - 8443",
+                "💦 10 - VLESS - Domain - 8443",
+                "💦 11 - VLESS - IPv4 - 8443",
+                "💦 12 - VLESS - IPv4 - 8443",
+                "💦 13 - VLESS - IPv6 - 8443",
+                "💦 14 - VLESS - IPv6 - 8443",
+                "💦 15 - VLESS - Clean IP - 8443",
+                "💦 16 - VLESS - Clean IP - 8443",
+                "💦 17 - VLESS - Domain - 2053",
+                "💦 18 - VLESS - Domain - 2053",
+                "💦 19 - VLESS - IPv4 - 2053",
+                "💦 20 - VLESS - IPv4 - 2053",
+                "💦 21 - VLESS - IPv6 - 2053",
+                "💦 22 - VLESS - IPv6 - 2053",
+                "💦 23 - VLESS - Clean IP - 2053",
+                "💦 24 - VLESS - Clean IP - 2053",
+                "💦 25 - VLESS - Domain - 2083",
+                "💦 26 - VLESS - Domain - 2083",
+                "💦 27 - VLESS - IPv4 - 2083",
+                "💦 28 - VLESS - IPv4 - 2083",
+                "💦 29 - VLESS - IPv6 - 2083",
+                "💦 30 - VLESS - IPv6 - 2083",
+                "💦 31 - VLESS - Clean IP - 2083",
+                "💦 32 - VLESS - Clean IP - 2083",
+                "💦 33 - VLESS - Domain - 2087",
+                "💦 34 - VLESS - Domain - 2087",
+                "💦 35 - VLESS - IPv4 - 2087",
+                "💦 36 - VLESS - IPv4 - 2087",
+                "💦 37 - VLESS - IPv6 - 2087",
+                "💦 38 - VLESS - IPv6 - 2087",
+                "💦 39 - VLESS - Clean IP - 2087",
+                "💦 40 - VLESS - Clean IP - 2087",
+                "💦 41 - VLESS - Domain - 2096",
+                "💦 42 - VLESS - Domain - 2096",
+                "💦 43 - VLESS - IPv4 - 2096",
+                "💦 44 - VLESS - IPv4 - 2096",
+                "💦 45 - VLESS - IPv6 - 2096",
+                "💦 46 - VLESS - IPv6 - 2096",
+                "💦 47 - VLESS - Clean IP - 2096",
+                "💦 48 - VLESS - Clean IP - 2096",
+                "💦 1 - Trojan - Domain - 443",
+                "💦 2 - Trojan - Domain - 443",
+                "💦 3 - Trojan - IPv4 - 443",
+                "💦 4 - Trojan - IPv4 - 443",
+                "💦 5 - Trojan - IPv6 - 443",
+                "💦 6 - Trojan - IPv6 - 443",
+                "💦 7 - Trojan - Clean IP - 443",
+                "💦 8 - Trojan - Clean IP - 443",
+                "💦 9 - Trojan - Domain - 8443",
+                "💦 10 - Trojan - Domain - 8443",
+                "💦 11 - Trojan - IPv4 - 8443",
+                "💦 12 - Trojan - IPv4 - 8443",
+                "💦 13 - Trojan - IPv6 - 8443",
+                "💦 14 - Trojan - IPv6 - 8443",
+                "💦 15 - Trojan - Clean IP - 8443",
+                "💦 16 - Trojan - Clean IP - 8443",
+                "💦 17 - Trojan - Domain - 2053",
+                "💦 18 - Trojan - Domain - 2053",
+                "💦 19 - Trojan - IPv4 - 2053",
+                "💦 20 - Trojan - IPv4 - 2053",
+                "💦 21 - Trojan - IPv6 - 2053",
+                "💦 22 - Trojan - IPv6 - 2053",
+                "💦 23 - Trojan - Clean IP - 2053",
+                "💦 24 - Trojan - Clean IP - 2053",
+                "💦 25 - Trojan - Domain - 2083",
+                "💦 26 - Trojan - Domain - 2083",
+                "💦 27 - Trojan - IPv4 - 2083",
+                "💦 28 - Trojan - IPv4 - 2083",
+                "💦 29 - Trojan - IPv6 - 2083",
+                "💦 30 - Trojan - IPv6 - 2083",
+                "💦 31 - Trojan - Clean IP - 2083",
+                "💦 32 - Trojan - Clean IP - 2083",
+                "💦 33 - Trojan - Domain - 2087",
+                "💦 34 - Trojan - Domain - 2087",
+                "💦 35 - Trojan - IPv4 - 2087",
+                "💦 36 - Trojan - IPv4 - 2087",
+                "💦 37 - Trojan - IPv6 - 2087",
+                "💦 38 - Trojan - IPv6 - 2087",
+                "💦 39 - Trojan - Clean IP - 2087",
+                "💦 40 - Trojan - Clean IP - 2087",
+                "💦 41 - Trojan - Domain - 2096",
+                "💦 42 - Trojan - Domain - 2096",
+                "💦 43 - Trojan - IPv4 - 2096",
+                "💦 44 - Trojan - IPv4 - 2096",
+                "💦 45 - Trojan - IPv6 - 2096",
+                "💦 46 - Trojan - IPv6 - 2096",
+                "💦 47 - Trojan - Clean IP - 2096",
+                "💦 48 - Trojan - Clean IP - 2096"
+            ]
+        }
+    ],
+    "rule-providers": {
+        "cn": {
+            "type": "http",
+            "format": "yaml",
+            "behavior": "domain",
+            "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.yaml",
+            "path": "./ruleset/cn.yaml",
+            "interval": 86400
+        },
+        "cn-cidr": {
+            "type": "http",
+            "format": "yaml",
+            "behavior": "ipcidr",
+            "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.yaml",
+            "path": "./ruleset/cn-cidr.yaml",
+            "interval": 86400
+        },
+        "malware": {
+            "type": "http",
+            "format": "text",
+            "behavior": "domain",
+            "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/malware.txt",
+            "path": "./ruleset/malware.txt",
+            "interval": 86400
+        },
+        "phishing": {
+            "type": "http",
+            "format": "text",
+            "behavior": "domain",
+            "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/phishing.txt",
+            "path": "./ruleset/phishing.txt",
+            "interval": 86400
+        },
+        "cryptominers": {
+            "type": "http",
+            "format": "text",
+            "behavior": "domain",
+            "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/cryptominers.txt",
+            "path": "./ruleset/cryptominers.txt",
+            "interval": 86400
+        },
+        "category-ads-all": {
+            "type": "http",
+            "format": "text",
+            "behavior": "domain",
+            "url": "https://raw.githubusercontent.com/Chocolate4U/Iran-clash-rules/release/category-ads-all.txt",
+            "path": "./ruleset/category-ads-all.txt",
+            "interval": 86400
+        }
+    },
+    "rules": [
+        "NETWORK,udp,REJECT",
+        "RULE-SET,malware,REJECT",
+        "RULE-SET,phishing,REJECT",
+        "RULE-SET,cryptominers,REJECT",
+        "RULE-SET,category-ads-all,REJECT",
+        "RULE-SET,cn,DIRECT",
+        "RULE-SET,cn-cidr,DIRECT",
+        "MATCH,✅ Selector"
+    ],
+    "ntp": {
+        "enable": true,
+        "server": "time.apple.com",
+        "port": 123,
+        "interval": 30
+    }
+}
